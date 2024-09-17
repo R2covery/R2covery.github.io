@@ -169,6 +169,51 @@
             </div>
         </div>
         
+        <div class="timeline" data-title="aboutthesite">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2024/9/17</div>
+                <a href="/2024/09/17/About-the-blog-1/">
+                    <h3>About the site</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/my-feel/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            my feel
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/config/" style="color: #00bcd4">
+                                config
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/blog/" style="color: #ffa2c4">
+                                blog
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>
 
@@ -187,6 +232,11 @@
             <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
         </div>
         
+        {% if theme.footer.counter %}
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">总访问量:<span id="busuanzi_value_site_pv"></span>次</span>
+            <span class="post-meta-divider">|</span>
+        {% endif %}
     </div>
 </footer>
 
