@@ -973,3 +973,9 @@ ol li {
         padding-left: 20px;
     }
 }
+
+.friend-links h2 {
+    font-size: 1.2em; /* 标题字体大小 */
+    color: #333; /* 标题颜色 */
+    margin-bottom: 10px; /* 标题与友链之间的间距 */
+}

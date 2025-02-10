@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Comment system is comming soon... | R2covery&#39;s cyber base</title>
+    <title>Tags: emoji | R2covery&#39;s cyber base</title>
     <meta name="author" content="R2covery" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -43,14 +43,6 @@
 
 <script src="/js/lib/preview.js"></script>
 
-
-
-
-
-
-<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
 
 
 
@@ -163,50 +155,110 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>Comment system is comming soon...</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/9/17
+            <div id="archives">
+    
+    <div class="categories-tags">
+        
+        
+        
+        <span>
+            <a href="/tags/config/" style="background: #03a9f4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                config
+            </a>
         </span>
         
         
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
+        
+        <span>
+            <a href="/tags/blog/" style="background: #ffa2c4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                blog
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/comment/" style="background: #03a9f4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                comment
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/emoji/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                emoji
+            </a>
+        </span>
+        
+        
+        
+        
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2024/9/17</div>
+            <a href="/2024/09/17/About-the-blog-1/">
+                <h3>About the site</h3>
+            </a>
+            <div class="info">
                 
-                <a href="/tags/comment/" style="color: #03a9f4">
-                    comment
-                </a>
-            </span>
-            
-        </span>
-        
+                <span class="category">
+                    <a href="/categories/my-feel/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        my feel
+                    </a>
+                </span>
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/config/" style="color: #ffa2c4">
+                            config
+                        </a>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/blog/" style="color: #00a596">
+                            blog
+                        </a>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/emoji/" style="color: #ffa2c4">
+                            emoji
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
     </div>
-    
-    <div class="content" v-pre>
-        <p>等我有空了一定弄…</p>
-
-    </div>
-    
-    
-    
-    
-    
-    <div id="comment">
-        <div id="waline-container"></div>
-    </div>
-    
-    
     
 </div>
 
@@ -246,29 +298,6 @@
         
     </div>
     <script src="/js/main.js"></script>
-    
-    
-
-
-<script>
-    Waline.init({
-        el: "#waline-container",
-        serverURL: "https://walineforr2covery.vercel.app/",
-        commentCount: true,
-        pageview: true,
-        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
-        meta: "nick,mail,link".split(","),
-        requiredMeta: "nick".split(","),
-        lang: "en-US",
-        wordLimit: 0,
-        pageSize: "10",
-        login: "enable",
-        
-    });
-</script>
-
-
-
     
 </body>
 </html>
