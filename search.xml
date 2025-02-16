@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Comment system is comming soon...</title>
+    <url>/undefined/13801/</url>
+    <content><![CDATA[<p>等我有空了一定弄……</p>
+]]></content>
+      <tags>
+        <tag>[object Object]</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>About the site</title>
     <url>/undefined/38264/</url>
     <content><![CDATA[<p>Though there are still many problems and bugs to fix, like the compatibility for mobile devices and the size of background image, I’ll try my best to make here one of my home !<br>😂(the last row is to test if the emoji is available, never mind)</p>
@@ -34,14 +43,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Comment system is comming soon...</title>
-    <url>/undefined/13801/</url>
-    <content><![CDATA[<p>等我有空了一定弄……</p>
-]]></content>
-      <tags>
-        <tag>[object Object]</tag>
-      </tags>
   </entry>
 </search>
