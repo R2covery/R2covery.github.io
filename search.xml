@@ -76,6 +76,8 @@
     <url>/undefined/749a087e/</url>
     <content><![CDATA[<h1 id="实验零：环境搭建与实验准备"><a href="#实验零：环境搭建与实验准备" class="headerlink" title="实验零：环境搭建与实验准备"></a>实验零：环境搭建与实验准备</h1><h2 id="配置实验环境"><a href="#配置实验环境" class="headerlink" title="配置实验环境"></a>配置实验环境</h2><p>使用Ubuntu 22.04 LTS (jammy) on WSL 2进行实验</p>
 <p><img src="/image/YSOS_0/1739165696847.png" alt="1739165696847"></p>
+<span id="more"></span>
+
 <p>使用以下命令更新 apt 源并进行软件升级：</p>
 <p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
 <p>安装 qemu 等工具：</p>
