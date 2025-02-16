@@ -68,7 +68,7 @@
         <category>YSOS</category>
       </categories>
       <tags>
-        <tag>Operating System</tag>
+        <tag>OS</tag>
       </tags>
   </entry>
   <entry>
@@ -377,8 +377,8 @@ impl Shape &#123;
         <category>lab report</category>
       </categories>
       <tags>
-        <tag>Operating System</tag>
         <tag>Rust</tag>
+        <tag>OS</tag>
       </tags>
   </entry>
 </search>
