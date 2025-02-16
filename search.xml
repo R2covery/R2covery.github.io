@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>About the site</title>
-    <url>/2024/09/17/About-the-blog-1</url>
+    <url>/undefined/38264/</url>
     <content><![CDATA[<p>Though there are still many problems and bugs to fix, like the compatibility for mobile devices and the size of background image, I’ll try my best to make here one of my home !<br>😂(the last row is to test if the emoji is available, never mind)</p>
 <p>updated : Now the emoji can be displayed correctly using method provided by blog</p>
 <p><a href="https://blog.xaoxu.cn/archives/hexo-use-emoji">Hexo中使用emoji表情-一只小松徐吖 (xaoxu.cn)</a></p>
@@ -18,17 +18,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Comment system is comming soon...</title>
-    <url>/2024/09/20/About-the-blog</url>
-    <content><![CDATA[<p>等我有空了一定弄……</p>
-]]></content>
-      <tags>
-        <tag>[object Object]</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
-    <url>/2024/09/12/hello-world</url>
+    <url>/undefined/16107/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -43,5 +34,14 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Comment system is comming soon...</title>
+    <url>/undefined/13801/</url>
+    <content><![CDATA[<p>等我有空了一定弄……</p>
+]]></content>
+      <tags>
+        <tag>[object Object]</tag>
+      </tags>
   </entry>
 </search>
