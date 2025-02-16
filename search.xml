@@ -383,4 +383,11 @@ impl Shape &#123;
         <tag>OS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>test</title>
+    <url>/undefined/d87f7e0c/</url>
+    <content><![CDATA[<p>this is a picture</p>
+<p><img src="/image/test/1739697534319.png" alt="1739697534319"></p>
+]]></content>
+  </entry>
 </search>
