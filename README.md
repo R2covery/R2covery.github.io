@@ -1,10 +1,8 @@
 ##### Description
 
-A small blog site based on hexo
+A simple blog site based on [hexo](https://hexo.io/zh-cn/) and [NeXT](https://theme-next.js.org/)
 
 [https://r2covery.github.io/](https://r2covery.github.io/)
-
-Trying to add more......
 
 ##### Reference
 
