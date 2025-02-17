@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="实验零：环境搭建与实验准备配置实验环境使用Ubuntu 22.04 LTS (jammy) on WSL 2进行实验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="YatsenOS_LAB0">
+<meta property="og:url" content="http://example.com/articles/YSOS_0/index.html">
+<meta property="og:site_name" content="R2covery&#39;s cyber base">
+<meta property="og:description" content="实验零：环境搭建与实验准备配置实验环境使用Ubuntu 22.04 LTS (jammy) on WSL 2进行实验">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739165696847.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739165886013.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739166896783.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739167076847.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739166632005.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739167158816.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739175053518.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739175196536.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739175554767.png">
+<meta property="og:image" content="http://example.com/articles/YSOS_0/1739176548783.png">
+<meta property="article:published_time" content="2025-02-16T08:31:41.000Z">
+<meta property="article:modified_time" content="2025-02-16T09:55:26.165Z">
+<meta property="article:author" content="R2covery">
+<meta property="article:tag" content="OS">
+<meta property="article:tag" content="Rust">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/articles/YSOS_0/1739165696847.png">
+
+
+<link rel="canonical" href="http://example.com/articles/YSOS_0/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/articles/YSOS_0/","path":"articles/YSOS_0/","title":"YatsenOS_LAB0"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>YatsenOS_LAB0 | R2covery's cyber base</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">R2covery's cyber base</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">a blog for sharing knowledge and experience</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%9B%B6%EF%BC%9A%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">实验零：环境搭建与实验准备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.</span> <span class="nav-text">配置实验环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rust%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C"><span class="nav-number">1.2.</span> <span class="nav-text">Rust编程实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C-UEFI-Shell"><span class="nav-number">1.3.</span> <span class="nav-text">运行 UEFI Shell</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-QEMU-%E5%90%AF%E5%8A%A8-UEFI-Shell"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用 QEMU 启动 UEFI Shell</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8YSOS"><span class="nav-number">1.4.</span> <span class="nav-text">启动YSOS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Rust-Toolchain"><span class="nav-number">1.4.1.</span> <span class="nav-text">配置 Rust Toolchain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E7%AC%AC%E4%B8%80%E4%B8%AA-UEFI-%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.4.2.</span> <span class="nav-text">运行第一个 UEFI 程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="nav-number">1.5.</span> <span class="nav-text">思考题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88Windows%EF%BC%89%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B%EF%BC%8CUEFI-%E5%92%8C-Legacy%EF%BC%88BIOS%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.5.1.</span> <span class="nav-text">了解现代操作系统（Windows）的启动过程，UEFI 和 Legacy（BIOS）的区别是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88Windows%EF%BC%89%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">现代操作系统（Windows）的启动过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UEFI%E5%92%8CLegacy%EF%BC%88BIOS%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">UEFI和Legacy（BIOS）的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E8%A7%A3%E9%87%8A-Makefile-%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85%EF%BC%9F"><span class="nav-number">1.5.2.</span> <span class="nav-text">尝试解释 Makefile 中的命令做了哪些事情？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">变量定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="nav-number">1.5.2.2.</span> <span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E5%AE%9A%E4%B9%89"><span class="nav-number">1.5.2.3.</span> <span class="nav-text">目标定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.2.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-cargo-%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%92%8C-docs-rs-%E7%9A%84%E6%96%87%E6%A1%A3%EF%BC%8C%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E5%BE%88%E6%96%B9%E4%BE%BF%E7%9A%84%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E3%80%82%E8%BF%99%E4%BA%9B%E5%BA%93%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F%E5%AE%83%E4%BB%AC%E6%98%AF%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%A2%AB%E7%BC%96%E8%AF%91%E7%9A%84%EF%BC%9F"><span class="nav-number">1.5.3.</span> <span class="nav-text">利用 cargo 的包管理和 docs.rs 的文档，我们可以很方便的使用第三方库。这些库的源代码在哪里？它们是什么时候被编译的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E7%94%A8-entry-%E8%80%8C%E4%B8%8D%E6%98%AF%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8-main-%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%A5%E5%8F%A3%EF%BC%9F"><span class="nav-number">1.5.4.</span> <span class="nav-text">为什么需要用 #[entry] 而不是直接使用 main 函数作为程序的入口？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bonus"><span class="nav-number">1.6.</span> <span class="nav-text">bonus</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">R2covery</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/R2covery" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;R2covery" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/r2covery@outlook.com" title="E-Mail → r2covery@outlook.com" rel="noopener me"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/articles/YSOS_0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="R2covery">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="R2covery's cyber base">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="YatsenOS_LAB0 | R2covery's cyber base">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          YatsenOS_LAB0
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-02-16 16:31:41 / 修改时间：17:55:26" itemprop="dateCreated datePublished" datetime="2025-02-16T16:31:41+08:00">2025-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/YSOS/" itemprop="url" rel="index"><span itemprop="name">YSOS</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/YSOS/lab-report/" itemprop="url" rel="index"><span itemprop="name">lab report</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>14k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>12 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="实验零：环境搭建与实验准备"><a href="#实验零：环境搭建与实验准备" class="headerlink" title="实验零：环境搭建与实验准备"></a>实验零：环境搭建与实验准备</h1><h2 id="配置实验环境"><a href="#配置实验环境" class="headerlink" title="配置实验环境"></a>配置实验环境</h2><p>使用Ubuntu 22.04 LTS (jammy) on WSL 2进行实验</p>
+<img src="/articles/YSOS_0/1739165696847.png" class="" width="1739165696847">
+
+<span id="more"></span>
+
+<p>使用以下命令更新 apt 源并进行软件升级：</p>
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p>
+<p>安装 qemu 等工具：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install qemu-system-x86 build-essential gdb</span><br></pre></td></tr></table></figure>
+
+<p>安装 rustup：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl --proto &#x27;=https&#x27; --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line">source &quot;$HOME/.cargo/env&quot;</span><br></pre></td></tr></table></figure>
+
+<p>相关软件包版本如下：</p>
+<img src="/articles/YSOS_0/1739165886013.png" class="" width="1739165886013">
+
+<h2 id="Rust编程实验"><a href="#Rust编程实验" class="headerlink" title="Rust编程实验"></a>Rust编程实验</h2><p>使用 Rust 编写一个程序，完成以下任务：</p>
+<p>a.创建一个函数 <code>count_down(seconds: u64)</code></p>
+<p>该函数接收一个 <code>u64</code> 类型的参数，表示倒计时的秒数。</p>
+<p>函数应该每秒输出剩余的秒数，直到倒计时结束，然后输出 <code>Countdown finished!</code>。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// 倒计时函数</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">count_down</span>(seconds: <span class="type">u64</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> (<span class="number">1</span>..=seconds).<span class="title function_ invoke__">rev</span>() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125; seconds remaining...&quot;</span>, i);</span><br><span class="line">        thread::<span class="title function_ invoke__">sleep</span>(Duration::<span class="title function_ invoke__">from_secs</span>(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Countdown finished!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>b. 创建一个函数 <code>read_and_print(file_path: &amp;str)</code></p>
+<p>该函数接收一个字符串参数，表示文件的路径。</p>
+<p>函数应该尝试读取并输出文件的内容。如果文件不存在，函数应该使用 expect 方法主动 panic，并输出 File not found!。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/// 读取并打印文件内容，若文件不存在则 panic</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">read_and_print</span>(file_path: &amp;<span class="type">str</span>) <span class="punctuation">-&gt;</span> io::<span class="type">Result</span>&lt;()&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">file</span> = File::<span class="title function_ invoke__">open</span>(file_path).<span class="title function_ invoke__">expect</span>(<span class="string">&quot;File not found!&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">contents</span> = <span class="type">String</span>::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    file.<span class="title function_ invoke__">read_to_string</span>(&amp;<span class="keyword">mut</span> contents)?;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, contents);</span><br><span class="line">    <span class="title function_ invoke__">Ok</span>(())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>c. 创建一个函数 file_size(file_path: &amp;str) -&gt; Result&lt;u64, &amp;str&gt;</p>
+<p>该函数接收一个字符串参数，表示文件的路径，并返回一个 Result。</p>
+<p>函数应该尝试打开文件，并在 Result 中返回文件大小。如果文件不存在，函数应该返回一个包含 File not found! 字符串的 Err。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取文件大小，若文件不存在则返回错误信息</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">file_size</span>(file_path: &amp;<span class="type">str</span>) <span class="punctuation">-&gt;</span> <span class="type">Result</span>&lt;<span class="type">u64</span>, &amp;<span class="type">str</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">match</span> std::fs::<span class="title function_ invoke__">metadata</span>(file_path) &#123;</span><br><span class="line">        <span class="title function_ invoke__">Ok</span>(metadata) =&gt; <span class="title function_ invoke__">Ok</span>(metadata.<span class="title function_ invoke__">len</span>()),</span><br><span class="line">        <span class="title function_ invoke__">Err</span>(_) =&gt; <span class="title function_ invoke__">Err</span>(<span class="string">&quot;File not found!&quot;</span>),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>d. 在 main 函数中，按照如下顺序调用上述函数：</p>
+<p>首先调用 count_down(5) 函数进行倒计时<br>然后调用 read_and_print(“&#x2F;etc&#x2F;hosts”) 函数尝试读取并输出文件内容<br>最后使用 std::io 获取几个用户输入的路径，并调用 file_size 函数尝试获取文件大小，并处理可能的错误。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// 调用倒计时函数</span></span><br><span class="line">    <span class="title function_ invoke__">count_down</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 尝试读取并打印 /etc/hosts 文件</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Err</span>(e) = <span class="title function_ invoke__">read_and_print</span>(<span class="string">&quot;/etc/hosts&quot;</span>) &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;Error reading file: &#123;&#125;&quot;</span>, e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取用户输入并尝试获取文件大小</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">input</span> = <span class="type">String</span>::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Enter file path to get its size:&quot;</span>);</span><br><span class="line">    io::<span class="title function_ invoke__">stdin</span>().<span class="title function_ invoke__">read_line</span>(&amp;<span class="keyword">mut</span> input).<span class="title function_ invoke__">expect</span>(<span class="string">&quot;Failed to read input&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">file_path</span> = input.<span class="title function_ invoke__">trim</span>(); <span class="comment">// 去除多余的换行符</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">match</span> <span class="title function_ invoke__">file_size</span>(file_path) &#123;</span><br><span class="line">        <span class="title function_ invoke__">Ok</span>(size) =&gt; <span class="built_in">println!</span>(<span class="string">&quot;File size: &#123;&#125; bytes&quot;</span>, size),</span><br><span class="line">        <span class="title function_ invoke__">Err</span>(e) =&gt; <span class="built_in">println!</span>(<span class="string">&quot;Error: &#123;&#125;&quot;</span>, e),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="/articles/YSOS_0/1739166896783.png" class="" width="1739166896783">
+
+<ol start="2">
+<li>实现一个进行字节数转换的函数，并格式化输出：</li>
+</ol>
+<p>实现函数 <code>humanized_size(size: u64) -&gt; (f64, &amp;&#39;static str)</code>将字节数转换为人类可读的大小和单位</p>
+<p>使用 1024 进制，并使用二进制前缀 <code>（B, KiB, MiB, GiB）</code>作为单位</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">humanized_size</span>(size: <span class="type">u64</span>) <span class="punctuation">-&gt;</span> (<span class="type">f64</span>, &amp;<span class="symbol">&#x27;static</span> <span class="type">str</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">units</span> = [<span class="string">&quot;B&quot;</span>, <span class="string">&quot;KiB&quot;</span>, <span class="string">&quot;MiB&quot;</span>, <span class="string">&quot;GiB&quot;</span>, <span class="string">&quot;TiB&quot;</span>, <span class="string">&quot;PiB&quot;</span>, <span class="string">&quot;EiB&quot;</span>, <span class="string">&quot;ZiB&quot;</span>, <span class="string">&quot;YiB&quot;</span>];</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">size</span> = size <span class="keyword">as</span> <span class="type">f64</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">unit_index</span> = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> size &gt;= <span class="number">1024.0</span> &amp;&amp; unit_index &lt; units.<span class="title function_ invoke__">len</span>() - <span class="number">1</span> &#123;</span><br><span class="line">        size /= <span class="number">1024.0</span>;</span><br><span class="line">        unit_index += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    (size, units[unit_index])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[test]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">test_humanized_size</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">byte_size</span> = <span class="number">2157087073</span>;</span><br><span class="line">    <span class="keyword">let</span> (size, unit) = <span class="title function_ invoke__">humanized_size</span>(byte_size);</span><br><span class="line">    <span class="built_in">assert_eq!</span>(<span class="string">&quot;Size :  2.0089 GiB&quot;</span>, <span class="built_in">format!</span>(<span class="string">&quot;Size :  &#123;:0.4&#125; &#123;&#125;&quot;</span>, size, unit));</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<img src="/articles/YSOS_0/1739167076847.png" class="" width="1739167076847">
+
+<ol start="3">
+<li><p>自行搜索学习如何利用现有的 crate 在终端中输出彩色的文字</p>
+<p>输出一些带有颜色的字符串，并尝试直接使用 <code>print!</code> 宏输出一到两个相同的效果。</p>
+<p>尝试输出如下格式和内容：</p>
+<ul>
+<li><code>INFO: Hello, world!</code>，其中 <code>INFO:</code> 为绿色，后续内容为白色</li>
+<li><code>WARNING: I&#39;m a teapot!</code>，颜色为黄色，加粗，并为 <code>WARNING</code> 添加下划线</li>
+<li><code>ERROR: KERNEL PANIC!!!</code>，颜色为红色，加粗，并尝试让这一行在控制行窗口居中</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> colored::*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// INFO: Hello, world!，其中 INFO: 为绿色，后续内容为白色</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;: &#123;&#125;&quot;</span>, <span class="string">&quot;INFO&quot;</span>.<span class="title function_ invoke__">green</span>(), <span class="string">&quot;Hello, world!&quot;</span>.<span class="title function_ invoke__">white</span>());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// WARNING: I&#x27;m a teapot!，颜色为黄色，加粗，并为 WARNING 添加下划线</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;: &#123;&#125;&quot;</span>, <span class="string">&quot;WARNING&quot;</span>.<span class="title function_ invoke__">yellow</span>().<span class="title function_ invoke__">bold</span>().<span class="title function_ invoke__">underline</span>(), <span class="string">&quot;I&#x27;m a teapot!&quot;</span>.<span class="title function_ invoke__">yellow</span>().<span class="title function_ invoke__">bold</span>());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ERROR: KERNEL PANIC!!!，颜色为红色，加粗，并尝试让这一行在控制行窗口居中</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">error_msg</span> = <span class="built_in">format!</span>(<span class="string">&quot;&#123;&#125;: &#123;&#125;&quot;</span>, <span class="string">&quot;ERROR&quot;</span>.<span class="title function_ invoke__">red</span>().<span class="title function_ invoke__">bold</span>(), <span class="string">&quot;KERNEL PANIC!!!&quot;</span>.<span class="title function_ invoke__">red</span>().<span class="title function_ invoke__">bold</span>());</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">padding</span> = (<span class="number">80</span> - error_msg.<span class="title function_ invoke__">len</span>()) / <span class="number">2</span>; <span class="comment">// 假设终端宽度为80</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;:^80&#125;&quot;</span>, error_msg); <span class="comment">// 使用格式化字符串居中</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 其他效果和内容</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is a cyan text on a black background&quot;</span>.<span class="title function_ invoke__">cyan</span>().<span class="title function_ invoke__">on_black</span>());</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is a magenta text with a blue background&quot;</span>.<span class="title function_ invoke__">magenta</span>().<span class="title function_ invoke__">on_blue</span>());</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is a bold red text&quot;</span>.<span class="title function_ invoke__">red</span>().<span class="title function_ invoke__">bold</span>());</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is an italic green text&quot;</span>.<span class="title function_ invoke__">green</span>().<span class="title function_ invoke__">italic</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="/articles/YSOS_0/1739166632005.png" class="" width="1739166632005">
+</li>
+<li><p>使用 enum 对类型实现同一化</p>
+</li>
+</ol>
+<p>实现一个名为 <code>Shape</code> 的枚举，并为它实现 <code>pub fn area(&amp;self) -&gt; f64</code> 方法，用于计算不同形状的面积。</p>
+ <figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::<span class="type">f64</span>::consts::PI;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义 Shape 枚举</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    Rectangle &#123; width: <span class="type">f64</span>, height: <span class="type">f64</span> &#125;,</span><br><span class="line">    Circle &#123; radius: <span class="type">f64</span> &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为 Shape 枚举实现 area 方法</span></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">area</span>(&amp;<span class="keyword">self</span>) <span class="punctuation">-&gt;</span> <span class="type">f64</span> &#123;</span><br><span class="line">        <span class="keyword">match</span> <span class="keyword">self</span> &#123;</span><br><span class="line">            Shape::Rectangle &#123; width, height &#125; =&gt; width * height,</span><br><span class="line">            Shape::Circle &#123; radius &#125; =&gt; PI * radius * radius,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="/articles/YSOS_0/1739167158816.png" class="" width="1739167158816">
+
+<p>实现一个元组结构体 UniqueId(u16)</p>
+<p>使得每次调用 UniqueId::new() 时总会得到一个新的不重复的 UniqueId。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::sync::atomic::&#123;AtomicU16, Ordering&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug, PartialEq, Eq)]</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">UniqueId</span>(<span class="type">u16</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">UniqueId</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>() <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">static</span> COUNTER: AtomicU16 = AtomicU16::<span class="title function_ invoke__">new</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">id</span> = COUNTER.<span class="title function_ invoke__">fetch_add</span>(<span class="number">1</span>, Ordering::Relaxed);</span><br><span class="line">        <span class="title function_ invoke__">UniqueId</span>(id)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[test]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">test_unique_id</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id1</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id2</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="built_in">assert_ne!</span>(id1, id2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id1</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id2</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;:?&#125;, &#123;:?&#125;&quot;</span>, id1, id2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>AtomicU16: 我们使用 AtomicU16 来存储当前的 ID 值。AtomicU16 是一个原子类型，可以在多线程环境下安全地进行操作。</p>
+<p>fetch_add: 每次调用 new() 时，我们使用 fetch_add 方法来原子地增加 COUNTER 的值，并返回增加前的值。fetch_add 保证了即使在多线程环境下，每个线程都会得到一个唯一的 ID。</p>
+<p>Ordering::Relaxed: 我们使用 Ordering::Relaxed 来指定内存顺序。在这个简单的场景下，Relaxed 顺序已经足够，因为我们只需要保证 COUNTER 的递增是原子的。</p>
+<p>UniqueId 结构体: UniqueId 是一个简单的元组结构体，包含一个 u16 类型的字段。</p>
+<img src="/articles/YSOS_0/1739175053518.png" class="" width="1739175053518">
+
+<h2 id="运行-UEFI-Shell"><a href="#运行-UEFI-Shell" class="headerlink" title="运行 UEFI Shell"></a>运行 UEFI Shell</h2><p>初始化仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/YatSenOS/YatSenOS-Tutorial-Volume-2</span><br><span class="line">$ cd /path/to/your/workdir</span><br><span class="line">$ git init</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &quot;init&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-QEMU-启动-UEFI-Shell"><a href="#使用-QEMU-启动-UEFI-Shell" class="headerlink" title="使用 QEMU 启动 UEFI Shell"></a>使用 QEMU 启动 UEFI Shell</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-x86_64 -bios ./assets/OVMF.fd -net none -nographic</span><br></pre></td></tr></table></figure>
+
+<img src="/articles/YSOS_0/1739175196536.png" class="" width="1739175196536">
+
+<p>图中包括了：</p>
+<ol>
+<li><p>启动命令：</p>
+<ul>
+<li><code>qemu - system - x86_64 - bios./assets/OVMF.fd - net none - nographic</code>：这是用于启动QEMU模拟器的命令。其中，<code>qemu - system - x86_64</code>指定了QEMU模拟的目标平台为x86_64架构；<code>- bios./assets/OVMF.fd</code>指定了使用的UEFI固件文件为 <code>OVMF.fd</code>；<code>- net none</code>表示不启用网络功能；<code>- nographic</code>表示以非图形化模式运行。</li>
+</ul>
+</li>
+<li><p>UEFI信息：</p>
+<ul>
+<li><code>UEFI Interactive Shell v2.2</code>：表明当前进入的是UEFI交互式外壳，版本为2.2。</li>
+<li><code>EDK II</code>：这是用于开发UEFI固件的一个平台，即EFI开发套件II（EFI Development Kit II）。</li>
+<li><code>UEFI v2.70 (EDK II, 0x00010000)</code>：显示了UEFI的版本为2.70，基于EDK II开发。</li>
+</ul>
+</li>
+<li><p>映射表（Mapping table）：</p>
+<ul>
+<li><code>BLK0: Alias(s):</code>：表示一个块设备的别名信息。</li>
+<li><code>PciRoot(0x0)/Pci(0x1,0x1)/Ata(0x0)</code>：这是块设备在PCI层次结构中的路径，表示该设备连接在PCI根总线的0号设备、1号功能下的ATA接口上。</li>
+</ul>
+</li>
+<li><p>启动提示：</p>
+<ul>
+<li><code>Press ESC in 1 seconds to skip startup.nsh or any other key to continue.</code>：提示用户在1秒内按下ESC键可以跳过名为 <code>startup.nsh</code>的脚本，否则按任意键继续。</li>
+</ul>
+</li>
+<li><p>Shell提示符：</p>
+<ul>
+<li><code>Shell&gt;</code>：这是UEFI交互式外壳的命令提示符，用户可以在此输入各种UEFI shell命令来进行操作，例如查看文件系统、管理设备等。</li>
+</ul>
+</li>
+</ol>
+<p>这说明在QEMU模拟器中成功启动了基于EDK II的UEFI系统，并进入了UEFI交互式外壳环境，以在此进一步进行系统相关的操作和配置。</p>
+<h2 id="启动YSOS"><a href="#启动YSOS" class="headerlink" title="启动YSOS"></a>启动YSOS</h2><h3 id="配置-Rust-Toolchain"><a href="#配置-Rust-Toolchain" class="headerlink" title="配置 Rust Toolchain"></a>配置 Rust Toolchain</h3><p>仓库提供的 <code>rust-toolchain.toml</code> 文件指定了需要使用的 Rust 工具链版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[toolchain]</span><br><span class="line">channel = &quot;nightly&quot;</span><br><span class="line">profile = &quot;minimal&quot;</span><br><span class="line">components = [ &quot;rust-src&quot;, &quot;rustfmt&quot;, &quot;clippy&quot; ]</span><br><span class="line">targets = [ &quot;x86_64-unknown-uefi&quot; ]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>具体来说，为了编译 UEFI 程序，我们需要使用 x86_64-unknown-uefi 编译目标。</p>
+<p>同时，我们需要使用 rust-src 组件来编译标准库，使用 rustfmt 组件来格式化代码，使用 clippy 组件来获取一些代码编写建议。</p>
+<p>为了编译内核和启用一些面向裸机的特性，我们需要使用 nightly 版本的 Rust 工具链。</p>
+<p>在配置好的工作区中执行编译时，Rust 会自动下载并安装对应的工具链。</p>
+<h3 id="运行第一个-UEFI-程序"><a href="#运行第一个-UEFI-程序" class="headerlink" title="运行第一个 UEFI 程序"></a>运行第一个 UEFI 程序</h3><p>编译一个 UEFI 程序时，我们没有操作系统所提供的标准库，也没有操作系统提供的 Interpreter，因此我们需要使用 #![no_std] 来声明我们的程序不依赖标准库，使用 #![no_main] 来声明我们的程序不依赖操作系统的入口函数。</p>
+<p>同时，我们需要使用 core 和 alloc crate 来提供一些基本的数据结构和功能，使用 uefi crate 来提供 UEFI 程序运行时所需要的各种信息。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#![no_std]</span></span><br><span class="line"><span class="meta">#![no_main]</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#[macro_use]</span></span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">crate</span> log;</span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">crate</span> alloc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> core::arch::asm;</span><br><span class="line"><span class="keyword">use</span> uefi::&#123;Status, entry&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[entry]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">efi_main</span>() <span class="punctuation">-&gt;</span> Status &#123;</span><br><span class="line">    uefi::helpers::<span class="title function_ invoke__">init</span>().<span class="title function_ invoke__">expect</span>(<span class="string">&quot;Failed to initialize utilities&quot;</span>);</span><br><span class="line">    log::<span class="title function_ invoke__">set_max_level</span>(log::LevelFilter::Info);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">std_num</span> = <span class="number">22336301</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">loop</span> &#123;</span><br><span class="line">        info!(<span class="string">&quot;Hello World from UEFI bootloader! @ &#123;&#125;&quot;</span>, std_num);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> <span class="variable">_</span> <span class="keyword">in</span> <span class="number">0</span>..<span class="number">0x10000000</span> &#123;</span><br><span class="line">            <span class="keyword">unsafe</span> &#123;</span><br><span class="line">                asm!(<span class="string">&quot;nop&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体而言，efi_main 通过 #[entry] 被指定为 UEFI 程序的入口函数，在 efi_main 函数中，首先对 UEFI 相关功能组件进行初始化，然后进入一个死循环，每次循环输出一条日志后等待一段时间。</p>
+<p>得到结果如图：</p>
+<img src="/articles/YSOS_0/1739175554767.png" class="" width="1739175554767">
+
+<p>这里以 <code>BdsDxe</code> 开头的信息是 UEFI 正在尝试从 <code>DVD-ROM</code> 启动，但是没有找到可启动项，因此启动了 <code>EFI Internal Shell</code>。我们并没有给 QEMU 提供任何光盘设备挂载，因此这是预期的行为。</p>
+<h2 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h2><h3 id="了解现代操作系统（Windows）的启动过程，UEFI-和-Legacy（BIOS）的区别是什么？"><a href="#了解现代操作系统（Windows）的启动过程，UEFI-和-Legacy（BIOS）的区别是什么？" class="headerlink" title="了解现代操作系统（Windows）的启动过程，UEFI 和 Legacy（BIOS）的区别是什么？"></a>了解现代操作系统（Windows）的启动过程，<code>UEFI</code> 和 <code>Legacy</code>（<code>BIOS</code>）的区别是什么？</h3><h4 id="现代操作系统（Windows）的启动过程"><a href="#现代操作系统（Windows）的启动过程" class="headerlink" title="现代操作系统（Windows）的启动过程"></a>现代操作系统（Windows）的启动过程</h4><p>BIOS&#x2F;UEFI阶段：计算机通电后，BIOS或UEFI进行硬件初始化，执行加电自检（POST），检查硬件是否正常工作。之后查找启动设备（通常是硬盘），将操作系统的引导加载程序（Windows Boot Manager）加载到内存。</p>
+<p>Windows Boot Manager阶段：负责显示引导菜单，允许用户选择启动项，如不同版本的Windows或其他操作系统。用户选择后，Boot Manager加载选定操作系统的启动加载程序。</p>
+<p>启动加载程序阶段：启动加载程序（如Winload.exe）被加载到内存，它负责加载Windows内核。</p>
+<p>Windows内核加载阶段：Windows内核（ntoskrnl.exe）被加载到内存中，内核初始化系统组件，建立内存管理、设备驱动程序等，并创建会话管理器进程（Winlogon.exe）。</p>
+<p>会话管理器启动阶段：会话管理器（Winlogon.exe）负责用户登录，显示登录界面，用户输入凭据后，Winlogon验证用户身份，加载用户配置文件。</p>
+<p>用户登录阶段：用户配置文件包括用户的桌面设置、程序启动项等，并启动用户级别的进程，如系统托盘、网络连接等。</p>
+<p>资源管理器启动阶段：Windows资源管理器（Explorer.exe）启动，负责加载桌面、任务栏、桌面图标等用户界面元素。</p>
+<p>用户桌面显示阶段：最终，用户桌面显示，用户可以开始使用计算机。</p>
+<h4 id="UEFI和Legacy（BIOS）的区别"><a href="#UEFI和Legacy（BIOS）的区别" class="headerlink" title="UEFI和Legacy（BIOS）的区别"></a>UEFI和Legacy（BIOS）的区别</h4><ol>
+<li><p>基础架构：</p>
+<ul>
+<li>Legacy（BIOS）：是最早的一种固件接口，在计算机开机时初始化和测试系统硬件，并加载操作系统。</li>
+<li>UEFI：是一种个人电脑系统规格，用来定义操作系统与系统固件之间的软件界面，作为BIOS的替代方案，提供了更多更现代的功能。</li>
+</ul>
+</li>
+<li><p>启动方式：</p>
+<ul>
+<li>Legacy（BIOS）：采用<strong>MBR（主引导记录）方式</strong>启动，每个磁盘只能有一个活动分区。</li>
+<li>UEFI：采用<strong>GPT（GUID分区表）方式</strong>启动，每个磁盘可以有多个启动分区。</li>
+</ul>
+</li>
+<li><p>支持硬盘容量：</p>
+<ul>
+<li>Legacy（BIOS）：因采用MBR分区方式，对硬盘大小有限制，最大支持2TB。</li>
+<li>UEFI：采用GPT分区方式，理论上可支持高达18EB的硬盘大小。</li>
+</ul>
+</li>
+<li><p>安全性：</p>
+<ul>
+<li>Legacy（BIOS）：没有安全启动功能。</li>
+<li>UEFI：提供了“安全启动”功能，可防止未授权的操作系统和软件启动。</li>
+</ul>
+</li>
+<li><p>兼容性：</p>
+<ul>
+<li>Legacy（BIOS）：兼容性较强，支持所有Windows系统的安装，但只支持32位硬件和操作系统。</li>
+<li>UEFI：支持64位的硬件和操作系统，不过UEFI启动模式下不支持XP、部分Win7系统的安装（如需安装不仅要将UEFI启动模式更改为传统启动模式，还需将硬盘分区模式更改为MBR分区，且部分新电脑强制安装会出现USB接口失灵现象 ）。</li>
+</ul>
+</li>
+<li><p>启动速度：</p>
+<ul>
+<li>Legacy（BIOS）：启动过程相对繁琐，效率低，开机速度慢。</li>
+<li>UEFI：使开机程序化繁为简，能加快启动速度，提高开机后操作系统的启动速度。</li>
+</ul>
+</li>
+</ol>
+<h3 id="尝试解释-Makefile-中的命令做了哪些事情？"><a href="#尝试解释-Makefile-中的命令做了哪些事情？" class="headerlink" title="尝试解释 Makefile 中的命令做了哪些事情？"></a>尝试解释 Makefile 中的命令做了哪些事情？</h3><p>这个 <code>Makefile</code> 主要用于构建和运行一个基于 UEFI 的操作系统或引导程序（<code>ysos_boot</code>）。它定义了一些目标（targets）和变量，用于编译代码、设置 QEMU 虚拟机环境以及运行调试。</p>
+<h4 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">OVMF := assets/OVMF.fd</span><br><span class="line">ESP := esp</span><br><span class="line">BUILD_ARGS :=</span><br><span class="line">QEMU_ARGS := -m 64M</span><br><span class="line">QEMU_OUTPUT := -nographic</span><br><span class="line">MODE ?= release</span><br><span class="line">CUR_PATH := <span class="variable">$(<span class="built_in">shell</span> pwd)</span></span><br><span class="line">DBG_INFO := false</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>OVMF</code>: 指定 OVMF（UEFI 固件）文件的路径，用于 QEMU 启动。</li>
+<li><code>ESP</code>: 指定 EFI 系统分区（ESP）的目录名称，用于存放 UEFI 可执行文件。</li>
+<li><code>BUILD_ARGS</code>: 构建参数，默认为空。如果 <code>MODE=release</code>，则设置为 <code>--release</code>。</li>
+<li><code>QEMU_ARGS</code>: QEMU 的额外参数，例如 <code>-m 64M</code> 设置虚拟机内存为 64MB。</li>
+<li><code>QEMU_OUTPUT</code>: QEMU 的输出模式，<code>-nographic</code> 表示禁用图形界面。</li>
+<li><code>MODE</code>: 构建模式，默认为 <code>release</code>。可以通过命令行覆盖，例如 <code>make MODE=debug</code>。</li>
+<li><code>CUR_PATH</code>: 当前路径，通过 <code>$(shell pwd)</code> 获取。</li>
+<li><code>DBG_INFO</code>: 调试信息标志，当前未使用。</li>
+</ul>
+<h4 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ifeq</span> ($&#123;MODE&#125;, release)</span><br><span class="line">	BUILD_ARGS := --release</span><br><span class="line"><span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果 <code>MODE</code> 是 <code>release</code>，则设置 <code>BUILD_ARGS</code> 为 <code>--release</code>，表示以发布模式构建。</li>
+</ul>
+<h4 id="目标定义"><a href="#目标定义" class="headerlink" title="目标定义"></a>目标定义</h4><p><code>run</code></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">run: build launch</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>依赖 <code>build</code> 和 <code>launch</code> 目标。</li>
+<li>先构建项目，然后启动 QEMU。</li>
+</ul>
+<p><code>launch</code></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">launch:</span></span><br><span class="line">	@qemu-system-x86_64 \</span><br><span class="line">		-bios $&#123;OVMF&#125; \</span><br><span class="line">		-net none \</span><br><span class="line">		<span class="variable">$(QEMU_ARGS)</span> \</span><br><span class="line">		<span class="variable">$(QEMU_OUTPUT)</span> \</span><br><span class="line">		-drive format=raw,file=fat:$&#123;ESP&#125; \</span><br><span class="line">		-snapshot</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动 QEMU 虚拟机。</li>
+<li><code>-bios $&#123;OVMF&#125;</code>: 使用指定的 OVMF 固件。</li>
+<li><code>-net none</code>: 禁用网络。</li>
+<li><code>$(QEMU_ARGS)</code>: 添加额外的 QEMU 参数（如内存大小）。</li>
+<li><code>$(QEMU_OUTPUT)</code>: 设置输出模式（如 <code>-nographic</code>）。</li>
+<li><code>-drive format=raw,file=fat:$&#123;ESP&#125;</code>: 将 <code>esp</code> 目录作为 FAT 格式的虚拟磁盘加载。</li>
+<li><code>-snapshot</code>: 以快照模式运行，避免对虚拟磁盘的修改。</li>
+</ul>
+<p><code>intdbg</code></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">intdbg:</span></span><br><span class="line">	@qemu-system-x86_64 \</span><br><span class="line">		-bios $&#123;OVMF&#125; \</span><br><span class="line">		-net none \</span><br><span class="line">		<span class="variable">$(QEMU_ARGS)</span> \</span><br><span class="line">		<span class="variable">$(QEMU_OUTPUT)</span> \</span><br><span class="line">		-drive format=raw,file=fat:$&#123;ESP&#125; \</span><br><span class="line">		-snapshot \</span><br><span class="line">		-no-reboot -d int,cpu_reset</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动 QEMU 并启用中断调试。</li>
+<li><code>-no-reboot</code>: 虚拟机退出时不重启。</li>
+<li><code>-d int,cpu_reset</code>: 启用中断和 CPU 重置的调试信息。</li>
+</ul>
+<p><code>debug</code></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">debug:</span></span><br><span class="line">	@qemu-system-x86_64 \</span><br><span class="line">		-bios $&#123;OVMF&#125; \</span><br><span class="line">		-net none \</span><br><span class="line">		<span class="variable">$(QEMU_ARGS)</span> \</span><br><span class="line">		<span class="variable">$(QEMU_OUTPUT)</span> \</span><br><span class="line">		-drive format=raw,file=fat:$&#123;ESP&#125; \</span><br><span class="line">		-snapshot \</span><br><span class="line">		-s -S</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动 QEMU 并等待 GDB 连接。</li>
+<li><code>-s</code>: 启用 GDB 调试，监听端口 <code>1234</code>。</li>
+<li><code>-S</code>: 启动时不运行 CPU，等待 GDB 连接。</li>
+</ul>
+<p>clean</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">clean:</span></span><br><span class="line">	@cargo clean</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>清理构建产物，调用 <code>cargo clean</code> 删除 <code>target</code> 目录。</li>
+</ul>
+<p>build</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">build: <span class="variable">$(ESP)</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>依赖 <code>$(ESP)</code> 目标，表示构建项目并准备 ESP 目录。</li>
+</ul>
+<p>$(ESP)</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(ESP)</span>: <span class="variable">$(ESP)</span>/EFI/BOOT/BOOTX64.EFI</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>依赖 <code>$(ESP)/EFI/BOOT/BOOTX64.EFI</code> 目标，表示需要将构建的 EFI 文件复制到 ESP 目录。</li>
+</ul>
+<p><code>$(ESP)/EFI/BOOT/BOOTX64.EFI</code></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(ESP)</span>/EFI/BOOT/BOOTX64.EFI: target/x86_64-unknown-uefi/<span class="variable">$(MODE)</span>/ysos_boot.efi</span><br><span class="line">	@mkdir -p $(@D)</span><br><span class="line">	cp <span class="variable">$&lt;</span> <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将构建的 <code>ysos_boot.efi</code> 文件复制到 ESP 目录的 <code>EFI/BOOT/BOOTX64.EFI</code> 路径。</li>
+<li><code>mkdir -p $(@D)</code>: 创建目标目录（如果不存在）。</li>
+<li><code>cp $&lt; $@</code>: 复制文件，<code>$&lt;</code> 是第一个依赖项（<code>ysos_boot.efi</code>），<code>$@</code> 是目标文件（<code>BOOTX64.EFI</code>）。</li>
+</ul>
+<p><code>target/x86_64-unknown-uefi/$(MODE)/ysos_boot.efi</code></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">target/x86_64-unknown-uefi/$(MODE)/ysos_boot.efi: pkg/boot</span></span><br><span class="line">	cd pkg/boot &amp;&amp; cargo build <span class="variable">$(BUILD_ARGS)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>构建 <code>ysos_boot.efi</code> 文件。</li>
+<li><code>cd pkg/boot &amp;&amp; cargo build $(BUILD_ARGS)</code>: 进入 <code>pkg/boot</code> 目录并调用 <code>cargo build</code>，根据 <code>BUILD_ARGS</code> 决定是否以发布模式构建。</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>这个 <code>Makefile</code> 的主要功能是：</p>
+<ol>
+<li>构建 UEFI 引导程序：通过 <code>cargo build</code> 构建 <code>ysos_boot.efi</code>。</li>
+<li>准备 ESP 目录：将构建的 EFI 文件复制到 ESP 目录的指定路径。</li>
+<li>启动 QEMU：使用 OVMF 固件和 ESP 目录启动虚拟机，支持普通运行、调试和中断调试。</li>
+<li>清理构建产物：通过 <code>cargo clean</code> 清理构建文件。</li>
+</ol>
+<h3 id="利用-cargo-的包管理和-docs-rs-的文档，我们可以很方便的使用第三方库。这些库的源代码在哪里？它们是什么时候被编译的？"><a href="#利用-cargo-的包管理和-docs-rs-的文档，我们可以很方便的使用第三方库。这些库的源代码在哪里？它们是什么时候被编译的？" class="headerlink" title="利用 cargo 的包管理和 docs.rs 的文档，我们可以很方便的使用第三方库。这些库的源代码在哪里？它们是什么时候被编译的？"></a>利用 <code>cargo</code> 的包管理和 <code>docs.rs</code> 的文档，我们可以很方便的使用第三方库。这些库的源代码在哪里？它们是什么时候被编译的？</h3><p>在Rust生态中，使用 <code>cargo</code>管理的第三方库，其源代码通常存储在 <code>crates.io</code>仓库（这是Rust官方的包仓库 ）。</p>
+<p>程序运行时编译。当使用 <code>cargo</code>构建项目并编译依赖库时，编译时间是构建过程中的一个瞬时信息，通常在构建日志中可以看到某个库具体开始编译和结束编译的时间点。但这些日志信息在构建完成后一般不会持久保存特定的编译时间记录。</p>
+<h3 id="为什么需要用-entry-而不是直接使用-main-函数作为程序的入口？"><a href="#为什么需要用-entry-而不是直接使用-main-函数作为程序的入口？" class="headerlink" title="为什么需要用 #[entry] 而不是直接使用 main 函数作为程序的入口？"></a>为什么需要用 <code>#[entry]</code> 而不是直接使用 <code>main</code> 函数作为程序的入口？</h3><p>（生成自Kimi）</p>
+<p>在Rust中使用 <code>#[entry]</code>而非直接用 <code>main</code>函数作为程序入口，主要有以下一些原因：</p>
+<p>底层控制和定制化启动流程</p>
+<p>在一些特殊场景下，比如嵌入式开发等，开发者可能需要对程序的启动过程进行更精细的控制。<code>#[entry]</code>可以让开发者绕过Rust默认的一些启动设置，直接定义程序最开始执行的代码逻辑。例如，在嵌入式系统中，可能需要在初始化硬件（如设置时钟、配置外设等）之后再进入业务逻辑代码，通过 <code>#[entry]</code>可以将这些初始化代码放在入口函数中，确保在任何其他代码执行之前先完成硬件相关的准备工作。</p>
+<p>与裸机编程等场景适配</p>
+<p>当进行裸机编程（即不依赖操作系统的编程，直接在硬件上运行程序）时，Rust默认的 <code>main</code>函数入口机制可能无法满足需求。因为裸机环境下没有操作系统提供的各种运行时支持，<code>#[entry]</code>允许开发者编写符合裸机启动要求的代码，实现从硬件启动到程序执行的完整流程。</p>
+<p>构建特定类型的程序</p>
+<p>对于一些需要构建启动器、引导程序等特殊用途程序的场景，<code>#[entry]</code>提供了更灵活的入口定义方式。可以根据这类程序的独特需求，定制启动逻辑，而不是局限于 <code>main</code>函数默认的启动行为。</p>
+<p>与标准库的解耦</p>
+<p>使用 <code>#[entry]</code>还可以在一定程度上实现与标准库的解耦。在一些对程序体积、运行环境有严格要求的场景下，标准库可能并不是必需的或者甚至是不适用的。通过 <code>#[entry]</code>定义入口函数，可以在不依赖标准库中与 <code>main</code>函数相关的启动代码的情况下，编写独立运行的程序。</p>
+<h2 id="bonus"><a href="#bonus" class="headerlink" title="bonus"></a>bonus</h2><ol>
+<li>基于控制行颜色的 Rust 编程题目，参考 log crate 的文档，为不同的日志级别输出不同的颜色效果，并进行测试输出。</li>
+</ol>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> colored::Colorize;</span><br><span class="line"><span class="keyword">use</span> log::&#123;debug, error, info, trace, warn&#125;;</span><br><span class="line"><span class="keyword">use</span> env_logger::Builder;</span><br><span class="line"><span class="keyword">use</span> std::io::Write;</span><br><span class="line"><span class="comment">// 配置日志记录器</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">setup_logger</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">builder</span> = Builder::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="comment">// 自定义日志输出格式</span></span><br><span class="line">    builder.format(|buf, record| &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">level_str</span> = <span class="keyword">match</span> record.<span class="title function_ invoke__">level</span>() &#123;</span><br><span class="line">            log::Level::Error =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">red</span>(),</span><br><span class="line">            log::Level::Warn =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">yellow</span>(),</span><br><span class="line">            log::Level::Info =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">green</span>(),</span><br><span class="line">            log::Level::<span class="built_in">Debug</span> =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">blue</span>(),</span><br><span class="line">            log::Level::Trace =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">purple</span>(),</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 获取日志消息</span></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">message</span> = record.<span class="title function_ invoke__">args</span>().<span class="title function_ invoke__">to_string</span>();</span><br><span class="line">        <span class="comment">// 根据日志级别为消息添加颜色</span></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">colored_message</span> = <span class="keyword">match</span> record.<span class="title function_ invoke__">level</span>() &#123;</span><br><span class="line">            log::Level::Error =&gt; message.<span class="title function_ invoke__">red</span>(),</span><br><span class="line">            log::Level::Warn =&gt; message.<span class="title function_ invoke__">yellow</span>(),</span><br><span class="line">            log::Level::Info =&gt; message.<span class="title function_ invoke__">green</span>(),</span><br><span class="line">            log::Level::<span class="built_in">Debug</span> =&gt; message.<span class="title function_ invoke__">blue</span>(),</span><br><span class="line">            log::Level::Trace =&gt; message.<span class="title function_ invoke__">purple</span>(),</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 写入格式化后的日志行</span></span><br><span class="line">        <span class="built_in">writeln!</span>(buf, <span class="string">&quot;[&#123;&#125;] - &#123;&#125;&quot;</span>, level_str, colored_message)</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 解析默认环境变量并初始化日志记录器</span></span><br><span class="line">    builder.<span class="title function_ invoke__">parse_default_env</span>().<span class="title function_ invoke__">init</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="/articles/YSOS_0/1739176548783.png" class="" width="1739176548783">
+
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a target="_blank" rel="noopener" href="https://ysos.gzti.me/labs/0x00/">实验零：环境搭建与实验准备 - YatSenOS v2 Tutorial</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/OS/" rel="tag"><i class="fa fa-tag"></i> OS</a>
+              <a href="/tags/Rust/" rel="tag"><i class="fa fa-tag"></i> Rust</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/articles/About-the-blog/" rel="prev" title="Comment system is comming soon...">
+                  <i class="fa fa-angle-left"></i> Comment system is comming soon...
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/articles/About-YSOS/" rel="next" title="写在YSOS实验开始之前">
+                  写在YSOS实验开始之前 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">R2covery</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">15k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">14 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"R2covery","repo":"r2covery.github.io","client_id":"Ov23liJxKwwW7F5fYlHw","client_secret":"0e26fd899659431f80716755315066584cf43c06","admin_user":"R2covery","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"e278dde9d6f203b0bc3043b7cb7314a1"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

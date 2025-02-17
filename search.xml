@@ -1,64 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>About the site</title>
-    <url>/undefined/38264/</url>
-    <content><![CDATA[<p>Though there are still many problems and bugs to fix, like the compatibility for mobile devices and the size of background image, I’ll try my best to make here one of my home !</p>
-<span id="more"></span>
-
-<p>😂(the last row is to test if the emoji is available, never mind)</p>
-<p>updated : Now the emoji can be displayed correctly using method provided by blog</p>
-<p><a href="https://blog.xaoxu.cn/archives/hexo-use-emoji">Hexo中使用emoji表情-一只小松徐吖 (xaoxu.cn)</a></p>
-<p>😢 😋</p>
-]]></content>
-      <categories>
-        <category>my feel</category>
-      </categories>
-      <tags>
-        <tag>config</tag>
-        <tag>blog</tag>
-        <tag>emoji</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/undefined/16107/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<code>&lt;!--more--&gt;</code></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>init</category>
-      </categories>
-      <tags>
-        <tag>init</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Comment system is comming soon...</title>
-    <url>/undefined/13801/</url>
-    <content><![CDATA[<p>等我有空了一定弄……</p>
-]]></content>
-      <categories>
-        <category>TODO</category>
-      </categories>
-      <tags>
-        <tag>comment</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>写在YSOS实验开始之前</title>
-    <url>/undefined/d0cfcc85/</url>
+    <url>/articles/About-YSOS/</url>
     <content><![CDATA[<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>学完操作系统也已经一个学期，假期突发奇想想要试试学校大佬做的OS新实验路线，遂上手开做</p>
 <h1 id="现阶段的总结"><a href="#现阶段的总结" class="headerlink" title="现阶段的总结"></a>现阶段的总结</h1><p>发现实验的内容过于丰富（bushi），需要了解（除了Rust基础）的知识相当地多(就是菜👎)。囿于时间和能力，做出来的结果或许不尽如人意，在很多方面还没有透彻深入的了解，报告里使用了LLM来回答部分问答题 😢，希望之后能慢慢补上吧……</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://ysos.gzti.me/">中山大学 YatSenOS v2 操作系统实验教程 - YatSenOS v2 Tutorial</a></p>
@@ -72,10 +16,42 @@
       </tags>
   </entry>
   <entry>
+    <title>Comment system is comming soon...</title>
+    <url>/articles/About-the-blog/</url>
+    <content><![CDATA[<p>等我有空了一定弄……</p>
+]]></content>
+      <categories>
+        <category>TODO</category>
+      </categories>
+      <tags>
+        <tag>comment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About the site</title>
+    <url>/articles/About-the-blog-1/</url>
+    <content><![CDATA[<p>Though there are still many problems and bugs to fix, like the compatibility for mobile devices and the size of background image, I’ll try my best to make here one of my home !</p>
+<span id="more"></span>
+
+<p>😂(the last row is to test if the emoji is available, never mind)</p>
+<p>updated : Now the emoji can be displayed correctly using method provided by blog</p>
+<p><a href="https://blog.xaoxu.cn/archives/hexo-use-emoji">Hexo中使用emoji表情-一只小松徐吖 (xaoxu.cn)</a></p>
+<p>😢 😋</p>
+]]></content>
+      <categories>
+        <category>my feel</category>
+      </categories>
+      <tags>
+        <tag>config</tag>
+        <tag>[object Object]</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>YatsenOS_LAB0</title>
-    <url>/undefined/749a087e/</url>
+    <url>/articles/YSOS_0/</url>
     <content><![CDATA[<h1 id="实验零：环境搭建与实验准备"><a href="#实验零：环境搭建与实验准备" class="headerlink" title="实验零：环境搭建与实验准备"></a>实验零：环境搭建与实验准备</h1><h2 id="配置实验环境"><a href="#配置实验环境" class="headerlink" title="配置实验环境"></a>配置实验环境</h2><p>使用Ubuntu 22.04 LTS (jammy) on WSL 2进行实验</p>
-<p><img src="/image/YSOS_0/1739165696847.png" alt="1739165696847"></p>
+<img src="/articles/YSOS_0/1739165696847.png" class="" width="1739165696847">
+
 <span id="more"></span>
 
 <p>使用以下命令更新 apt 源并进行软件升级：</p>
@@ -87,7 +63,8 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl --proto &#x27;=https&#x27; --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line">source &quot;$HOME/.cargo/env&quot;</span><br></pre></td></tr></table></figure>
 
 <p>相关软件包版本如下：</p>
-<p><img src="/image/YSOS_0/1739165886013.png" alt="1739165886013"></p>
+<img src="/articles/YSOS_0/1739165886013.png" class="" width="1739165886013">
+
 <h2 id="Rust编程实验"><a href="#Rust编程实验" class="headerlink" title="Rust编程实验"></a>Rust编程实验</h2><p>使用 Rust 编写一个程序，完成以下任务：</p>
 <p>a.创建一个函数 <code>count_down(seconds: u64)</code></p>
 <p>该函数接收一个 <code>u64</code> 类型的参数，表示倒计时的秒数。</p>
@@ -108,7 +85,8 @@
 <p>首先调用 count_down(5) 函数进行倒计时<br>然后调用 read_and_print(“&#x2F;etc&#x2F;hosts”) 函数尝试读取并输出文件内容<br>最后使用 std::io 获取几个用户输入的路径，并调用 file_size 函数尝试获取文件大小，并处理可能的错误。</p>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// 调用倒计时函数</span></span><br><span class="line">    <span class="title function_ invoke__">count_down</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 尝试读取并打印 /etc/hosts 文件</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Err</span>(e) = <span class="title function_ invoke__">read_and_print</span>(<span class="string">&quot;/etc/hosts&quot;</span>) &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;Error reading file: &#123;&#125;&quot;</span>, e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取用户输入并尝试获取文件大小</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">input</span> = <span class="type">String</span>::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Enter file path to get its size:&quot;</span>);</span><br><span class="line">    io::<span class="title function_ invoke__">stdin</span>().<span class="title function_ invoke__">read_line</span>(&amp;<span class="keyword">mut</span> input).<span class="title function_ invoke__">expect</span>(<span class="string">&quot;Failed to read input&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">file_path</span> = input.<span class="title function_ invoke__">trim</span>(); <span class="comment">// 去除多余的换行符</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">match</span> <span class="title function_ invoke__">file_size</span>(file_path) &#123;</span><br><span class="line">        <span class="title function_ invoke__">Ok</span>(size) =&gt; <span class="built_in">println!</span>(<span class="string">&quot;File size: &#123;&#125; bytes&quot;</span>, size),</span><br><span class="line">        <span class="title function_ invoke__">Err</span>(e) =&gt; <span class="built_in">println!</span>(<span class="string">&quot;Error: &#123;&#125;&quot;</span>, e),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/image/YSOS_0/1739166896783.png" alt="1739166896783"></p>
+<img src="/articles/YSOS_0/1739166896783.png" class="" width="1739166896783">
+
 <ol start="2">
 <li>实现一个进行字节数转换的函数，并格式化输出：</li>
 </ol>
@@ -116,7 +94,8 @@
 <p>使用 1024 进制，并使用二进制前缀 <code>（B, KiB, MiB, GiB）</code>作为单位</p>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">humanized_size</span>(size: <span class="type">u64</span>) <span class="punctuation">-&gt;</span> (<span class="type">f64</span>, &amp;<span class="symbol">&#x27;static</span> <span class="type">str</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">units</span> = [<span class="string">&quot;B&quot;</span>, <span class="string">&quot;KiB&quot;</span>, <span class="string">&quot;MiB&quot;</span>, <span class="string">&quot;GiB&quot;</span>, <span class="string">&quot;TiB&quot;</span>, <span class="string">&quot;PiB&quot;</span>, <span class="string">&quot;EiB&quot;</span>, <span class="string">&quot;ZiB&quot;</span>, <span class="string">&quot;YiB&quot;</span>];</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">size</span> = size <span class="keyword">as</span> <span class="type">f64</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">unit_index</span> = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> size &gt;= <span class="number">1024.0</span> &amp;&amp; unit_index &lt; units.<span class="title function_ invoke__">len</span>() - <span class="number">1</span> &#123;</span><br><span class="line">        size /= <span class="number">1024.0</span>;</span><br><span class="line">        unit_index += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    (size, units[unit_index])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[test]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">test_humanized_size</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">byte_size</span> = <span class="number">2157087073</span>;</span><br><span class="line">    <span class="keyword">let</span> (size, unit) = <span class="title function_ invoke__">humanized_size</span>(byte_size);</span><br><span class="line">    <span class="built_in">assert_eq!</span>(<span class="string">&quot;Size :  2.0089 GiB&quot;</span>, <span class="built_in">format!</span>(<span class="string">&quot;Size :  &#123;:0.4&#125; &#123;&#125;&quot;</span>, size, unit));</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/image/YSOS_0/1739167076847.png" alt="1739167076847"></p>
+<img src="/articles/YSOS_0/1739167076847.png" class="" width="1739167076847">
+
 <ol start="3">
 <li><p>自行搜索学习如何利用现有的 crate 在终端中输出彩色的文字</p>
 <p>输出一些带有颜色的字符串，并尝试直接使用 <code>print!</code> 宏输出一到两个相同的效果。</p>
@@ -128,46 +107,33 @@
 </ul>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> colored::*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// INFO: Hello, world!，其中 INFO: 为绿色，后续内容为白色</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;: &#123;&#125;&quot;</span>, <span class="string">&quot;INFO&quot;</span>.<span class="title function_ invoke__">green</span>(), <span class="string">&quot;Hello, world!&quot;</span>.<span class="title function_ invoke__">white</span>());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// WARNING: I&#x27;m a teapot!，颜色为黄色，加粗，并为 WARNING 添加下划线</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;: &#123;&#125;&quot;</span>, <span class="string">&quot;WARNING&quot;</span>.<span class="title function_ invoke__">yellow</span>().<span class="title function_ invoke__">bold</span>().<span class="title function_ invoke__">underline</span>(), <span class="string">&quot;I&#x27;m a teapot!&quot;</span>.<span class="title function_ invoke__">yellow</span>().<span class="title function_ invoke__">bold</span>());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ERROR: KERNEL PANIC!!!，颜色为红色，加粗，并尝试让这一行在控制行窗口居中</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">error_msg</span> = <span class="built_in">format!</span>(<span class="string">&quot;&#123;&#125;: &#123;&#125;&quot;</span>, <span class="string">&quot;ERROR&quot;</span>.<span class="title function_ invoke__">red</span>().<span class="title function_ invoke__">bold</span>(), <span class="string">&quot;KERNEL PANIC!!!&quot;</span>.<span class="title function_ invoke__">red</span>().<span class="title function_ invoke__">bold</span>());</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">padding</span> = (<span class="number">80</span> - error_msg.<span class="title function_ invoke__">len</span>()) / <span class="number">2</span>; <span class="comment">// 假设终端宽度为80</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;:^80&#125;&quot;</span>, error_msg); <span class="comment">// 使用格式化字符串居中</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 其他效果和内容</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is a cyan text on a black background&quot;</span>.<span class="title function_ invoke__">cyan</span>().<span class="title function_ invoke__">on_black</span>());</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is a magenta text with a blue background&quot;</span>.<span class="title function_ invoke__">magenta</span>().<span class="title function_ invoke__">on_blue</span>());</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is a bold red text&quot;</span>.<span class="title function_ invoke__">red</span>().<span class="title function_ invoke__">bold</span>());</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, <span class="string">&quot;This is an italic green text&quot;</span>.<span class="title function_ invoke__">green</span>().<span class="title function_ invoke__">italic</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/image/YSOS_0/1739166632005.png" alt="1739166632005"></p>
+<img src="/articles/YSOS_0/1739166632005.png" class="" width="1739166632005">
 </li>
 <li><p>使用 enum 对类型实现同一化</p>
 </li>
 </ol>
 <p>实现一个名为 <code>Shape</code> 的枚举，并为它实现 <code>pub fn area(&amp;self) -&gt; f64</code> 方法，用于计算不同形状的面积。</p>
-<ul>
-<li><pre><code class="language-rust">use std::f64::consts::PI;
+ <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::<span class="type">f64</span>::consts::PI;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义 Shape 枚举</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    Rectangle &#123; width: <span class="type">f64</span>, height: <span class="type">f64</span> &#125;,</span><br><span class="line">    Circle &#123; radius: <span class="type">f64</span> &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为 Shape 枚举实现 area 方法</span></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">area</span>(&amp;<span class="keyword">self</span>) <span class="punctuation">-&gt;</span> <span class="type">f64</span> &#123;</span><br><span class="line">        <span class="keyword">match</span> <span class="keyword">self</span> &#123;</span><br><span class="line">            Shape::Rectangle &#123; width, height &#125; =&gt; width * height,</span><br><span class="line">            Shape::Circle &#123; radius &#125; =&gt; PI * radius * radius,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-// 定义 Shape 枚举
-enum Shape &#123;
-    Rectangle &#123; width: f64, height: f64 &#125;,
-    Circle &#123; radius: f64 &#125;,
-&#125;
+<img src="/articles/YSOS_0/1739167158816.png" class="" width="1739167158816">
 
-// 为 Shape 枚举实现 area 方法
-impl Shape &#123;
-    pub fn area(&amp;self) -&gt; f64 &#123;
-        match self &#123;
-            Shape::Rectangle &#123; width, height &#125; =&gt; width * height,
-            Shape::Circle &#123; radius &#125; =&gt; PI * radius * radius,
-        &#125;
-    &#125;
-&#125;
+<p>实现一个元组结构体 UniqueId(u16)</p>
+<p>使得每次调用 UniqueId::new() 时总会得到一个新的不重复的 UniqueId。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> std::sync::atomic::&#123;AtomicU16, Ordering&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug, PartialEq, Eq)]</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">UniqueId</span>(<span class="type">u16</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">UniqueId</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>() <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">static</span> COUNTER: AtomicU16 = AtomicU16::<span class="title function_ invoke__">new</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">id</span> = COUNTER.<span class="title function_ invoke__">fetch_add</span>(<span class="number">1</span>, Ordering::Relaxed);</span><br><span class="line">        <span class="title function_ invoke__">UniqueId</span>(id)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[test]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">test_unique_id</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id1</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id2</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="built_in">assert_ne!</span>(id1, id2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id1</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">id2</span> = UniqueId::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;:?&#125;, &#123;:?&#125;&quot;</span>, id1, id2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![1739167158816](image/YSOS_0/1739167158816.png)</span><br><span class="line"></span><br><span class="line">实现一个元组结构体 UniqueId(u16)</span><br><span class="line"></span><br><span class="line">使得每次调用 UniqueId::new() 时总会得到一个新的不重复的 UniqueId。</span><br><span class="line"></span><br><span class="line">```rust</span><br><span class="line">use std::sync::atomic::&#123;AtomicU16, Ordering&#125;;</span><br><span class="line"></span><br><span class="line">#[derive(Debug, PartialEq, Eq)]</span><br><span class="line">struct UniqueId(u16);</span><br><span class="line"></span><br><span class="line">impl UniqueId &#123;</span><br><span class="line">    fn new() -&gt; Self &#123;</span><br><span class="line">        static COUNTER: AtomicU16 = AtomicU16::new(0);</span><br><span class="line">        let id = COUNTER.fetch_add(1, Ordering::Relaxed);</span><br><span class="line">        UniqueId(id)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#[test]</span><br><span class="line">fn test_unique_id() &#123;</span><br><span class="line">    let id1 = UniqueId::new();</span><br><span class="line">    let id2 = UniqueId::new();</span><br><span class="line">    assert_ne!(id1, id2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fn main() &#123;</span><br><span class="line">    let id1 = UniqueId::new();</span><br><span class="line">    let id2 = UniqueId::new();</span><br><span class="line">    println!(&quot;&#123;:?&#125;, &#123;:?&#125;&quot;, id1, id2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
 <p>AtomicU16: 我们使用 AtomicU16 来存储当前的 ID 值。AtomicU16 是一个原子类型，可以在多线程环境下安全地进行操作。</p>
 <p>fetch_add: 每次调用 new() 时，我们使用 fetch_add 方法来原子地增加 COUNTER 的值，并返回增加前的值。fetch_add 保证了即使在多线程环境下，每个线程都会得到一个唯一的 ID。</p>
 <p>Ordering::Relaxed: 我们使用 Ordering::Relaxed 来指定内存顺序。在这个简单的场景下，Relaxed 顺序已经足够，因为我们只需要保证 COUNTER 的递增是原子的。</p>
 <p>UniqueId 结构体: UniqueId 是一个简单的元组结构体，包含一个 u16 类型的字段。</p>
-<p><img src="/image/YSOS_0/1739175053518.png" alt="1739175053518"></p>
+<img src="/articles/YSOS_0/1739175053518.png" class="" width="1739175053518">
+
 <h2 id="运行-UEFI-Shell"><a href="#运行-UEFI-Shell" class="headerlink" title="运行 UEFI Shell"></a>运行 UEFI Shell</h2><p>初始化仓库</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/YatSenOS/YatSenOS-Tutorial-Volume-2</span><br><span class="line">$ cd /path/to/your/workdir</span><br><span class="line">$ git init</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &quot;init&quot;</span><br></pre></td></tr></table></figure>
 
 <h3 id="使用-QEMU-启动-UEFI-Shell"><a href="#使用-QEMU-启动-UEFI-Shell" class="headerlink" title="使用 QEMU 启动 UEFI Shell"></a>使用 QEMU 启动 UEFI Shell</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">qemu-system-x86_64 -bios ./assets/OVMF.fd -net none -nographic</span><br></pre></td></tr></table></figure>
 
-<p><img src="/image/YSOS_0/1739175196536.png" alt="1739175196536"></p>
+<img src="/articles/YSOS_0/1739175196536.png" class="" width="1739175196536">
+
 <p>图中包括了：</p>
 <ol>
 <li><p>启动命令：</p>
@@ -213,7 +179,8 @@ impl Shape &#123;
 
 <p>具体而言，efi_main 通过 #[entry] 被指定为 UEFI 程序的入口函数，在 efi_main 函数中，首先对 UEFI 相关功能组件进行初始化，然后进入一个死循环，每次循环输出一条日志后等待一段时间。</p>
 <p>得到结果如图：</p>
-<p><img src="/image/YSOS_0/1739175554767.png" alt="1739175554767"></p>
+<img src="/articles/YSOS_0/1739175554767.png" class="" width="1739175554767">
+
 <p>这里以 <code>BdsDxe</code> 开头的信息是 UEFI 正在尝试从 <code>DVD-ROM</code> 启动，但是没有找到可启动项，因此启动了 <code>EFI Internal Shell</code>。我们并没有给 QEMU 提供任何光盘设备挂载，因此这是预期的行为。</p>
 <h2 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h2><h3 id="了解现代操作系统（Windows）的启动过程，UEFI-和-Legacy（BIOS）的区别是什么？"><a href="#了解现代操作系统（Windows）的启动过程，UEFI-和-Legacy（BIOS）的区别是什么？" class="headerlink" title="了解现代操作系统（Windows）的启动过程，UEFI 和 Legacy（BIOS）的区别是什么？"></a>了解现代操作系统（Windows）的启动过程，<code>UEFI</code> 和 <code>Legacy</code>（<code>BIOS</code>）的区别是什么？</h3><h4 id="现代操作系统（Windows）的启动过程"><a href="#现代操作系统（Windows）的启动过程" class="headerlink" title="现代操作系统（Windows）的启动过程"></a>现代操作系统（Windows）的启动过程</h4><p>BIOS&#x2F;UEFI阶段：计算机通电后，BIOS或UEFI进行硬件初始化，执行加电自检（POST），检查硬件是否正常工作。之后查找启动设备（通常是硬盘），将操作系统的引导加载程序（Windows Boot Manager）加载到内存。</p>
 <p>Windows Boot Manager阶段：负责显示引导菜单，允许用户选择启动项，如不同版本的Windows或其他操作系统。用户选择后，Boot Manager加载选定操作系统的启动加载程序。</p>
@@ -371,7 +338,8 @@ impl Shape &#123;
 </ol>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> colored::Colorize;</span><br><span class="line"><span class="keyword">use</span> log::&#123;debug, error, info, trace, warn&#125;;</span><br><span class="line"><span class="keyword">use</span> env_logger::Builder;</span><br><span class="line"><span class="keyword">use</span> std::io::Write;</span><br><span class="line"><span class="comment">// 配置日志记录器</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">setup_logger</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">builder</span> = Builder::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="comment">// 自定义日志输出格式</span></span><br><span class="line">    builder.format(|buf, record| &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">level_str</span> = <span class="keyword">match</span> record.<span class="title function_ invoke__">level</span>() &#123;</span><br><span class="line">            log::Level::Error =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">red</span>(),</span><br><span class="line">            log::Level::Warn =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">yellow</span>(),</span><br><span class="line">            log::Level::Info =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">green</span>(),</span><br><span class="line">            log::Level::<span class="built_in">Debug</span> =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">blue</span>(),</span><br><span class="line">            log::Level::Trace =&gt; record.<span class="title function_ invoke__">level</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">purple</span>(),</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 获取日志消息</span></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">message</span> = record.<span class="title function_ invoke__">args</span>().<span class="title function_ invoke__">to_string</span>();</span><br><span class="line">        <span class="comment">// 根据日志级别为消息添加颜色</span></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">colored_message</span> = <span class="keyword">match</span> record.<span class="title function_ invoke__">level</span>() &#123;</span><br><span class="line">            log::Level::Error =&gt; message.<span class="title function_ invoke__">red</span>(),</span><br><span class="line">            log::Level::Warn =&gt; message.<span class="title function_ invoke__">yellow</span>(),</span><br><span class="line">            log::Level::Info =&gt; message.<span class="title function_ invoke__">green</span>(),</span><br><span class="line">            log::Level::<span class="built_in">Debug</span> =&gt; message.<span class="title function_ invoke__">blue</span>(),</span><br><span class="line">            log::Level::Trace =&gt; message.<span class="title function_ invoke__">purple</span>(),</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 写入格式化后的日志行</span></span><br><span class="line">        <span class="built_in">writeln!</span>(buf, <span class="string">&quot;[&#123;&#125;] - &#123;&#125;&quot;</span>, level_str, colored_message)</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 解析默认环境变量并初始化日志记录器</span></span><br><span class="line">    builder.<span class="title function_ invoke__">parse_default_env</span>().<span class="title function_ invoke__">init</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/image/YSOS_0/1739176548783.png" alt="1739176548783"></p>
+<img src="/articles/YSOS_0/1739176548783.png" class="" width="1739176548783">
+
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://ysos.gzti.me/labs/0x00/">实验零：环境搭建与实验准备 - YatSenOS v2 Tutorial</a></p>
 ]]></content>
       <categories>
@@ -379,15 +347,70 @@ impl Shape &#123;
         <category>lab report</category>
       </categories>
       <tags>
-        <tag>Rust</tag>
         <tag>OS</tag>
+        <tag>Rust</tag>
       </tags>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/undefined/d87f7e0c/</url>
-    <content><![CDATA[<p>this is a picture</p>
-<p><img src="/image/test/1739697534319.png" alt="1739697534319"></p>
+    <title>Hello World</title>
+    <url>/articles/hello-world/</url>
+    <content><![CDATA[<p>Welcome to </p>
+<p><a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<code>&lt;!--more--&gt;</code></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>init</category>
+      </categories>
+      <tags>
+        <tag>init</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode的Markdown插入本地图片，并使其在本地和hexo博客上都正常显示</title>
+    <url>/articles/md-with-pic/</url>
+    <content><![CDATA[<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>参考<a href="https://zhuanlan.zhihu.com/p/280758822">hexo博客显示markdown路径的图片 - 知乎</a>的解答：</p>
+<ol>
+<li>先下载hexo-image-link插件： <code>npm install hexo-image-link --save</code></li>
+<li>在hexo博客根目录下的 <code>_config.yml</code>中设置 <code>post_asset_folder: true</code></li>
+<li>这时候使用 <code>npx hexo new &quot;post&quot;</code>，可以看到在 <code>source/_posts</code>下面会创建一个 <code>post.md</code>及其同名文件夹，将需要引用的图片放进同名文件夹（即 <code> &#123;% asset_img "图片名.png" "图片描述" %&#125;</code>）</li>
+<li>正常执行 <code>npx hexo clean &amp;&amp; npx hexo g </code>，就可以看到自动转换成asset方法的引用</li>
+</ol>
+<span id="more"></span>
+
+<img src="/articles/md-with-pic/1739700726167.png" class="" width="1739700726167">
+
+<p>之后在本地启动和deploy就都可以正常显示。</p>
+<img src="/articles/md-with-pic/1739767397849.png" class="" width="1739767397849">
+
+<p>（编辑器内预览）</p>
+<img src="/articles/md-with-pic/1739767462012.png" class="" width="1739767462012">
+
+<p>（localhost预览）</p>
+<h1 id="⭐Attention"><a href="#⭐Attention" class="headerlink" title="⭐Attention"></a>⭐Attention</h1><p>这一方法似乎不适用于多层嵌套路径，例如 <code>image/post/picture.png</code>就会显示不存在了（即使这张图片确实存在）</p>
+<img src="/articles/md-with-pic/1739700812565.png" class="" width="1739700812565">
+
+<p>因此如果要“自动化”，还需要在工作区配置中修改一下Markdown编辑器插入图片的默认路径（Vscode-office为例，其余同理）</p>
+<img src="/articles/md-with-pic/1739700897999.png" class="" width="1739700897999">
+]]></content>
+      <categories>
+        <category>config</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>vscode</tag>
+        <tag>picture</tag>
+        <tag>markdown</tag>
+      </tags>
   </entry>
 </search>
