@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>写在YSOS实验开始之前</title>
-    <url>/articles/About-YSOS/</url>
-    <content><![CDATA[<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>学完操作系统也已经一个学期，假期突发奇想想要试试学校大佬做的OS新实验路线，遂上手开做</p>
-<h1 id="现阶段的总结"><a href="#现阶段的总结" class="headerlink" title="现阶段的总结"></a>现阶段的总结</h1><p>发现实验的内容过于丰富（bushi），需要了解（除了Rust基础）的知识相当地多(就是菜👎)。囿于时间和能力，做出来的结果或许不尽如人意，在很多方面还没有透彻深入的了解，报告里使用了LLM来回答部分问答题 😢，希望之后能慢慢补上吧……</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://ysos.gzti.me/">中山大学 YatSenOS v2 操作系统实验教程 - YatSenOS v2 Tutorial</a></p>
-]]></content>
-      <categories>
-        <category>my feel</category>
-        <category>YSOS</category>
-      </categories>
-      <tags>
-        <tag>OS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>About the site</title>
     <url>/articles/About-the-blog-1/</url>
     <content><![CDATA[<p>Though there are still many problems and bugs to fix, like the compatibility for mobile devices and the size of background image, I’ll try my best to make here one of my home !</p>
@@ -32,6 +17,21 @@
       <tags>
         <tag>config</tag>
         <tag>[object Object]</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>写在YSOS实验开始之前</title>
+    <url>/articles/About-YSOS/</url>
+    <content><![CDATA[<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>学完操作系统也已经一个学期，假期突发奇想想要试试学校大佬做的OS新实验路线，遂上手开做</p>
+<h1 id="现阶段的总结"><a href="#现阶段的总结" class="headerlink" title="现阶段的总结"></a>现阶段的总结</h1><p>发现实验的内容过于丰富（bushi），需要了解（除了Rust基础）的知识相当地多(就是菜👎)。囿于时间和能力，做出来的结果或许不尽如人意，在很多方面还没有透彻深入的了解，报告里使用了LLM来回答部分问答题 😢，希望之后能慢慢补上吧……</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://ysos.gzti.me/">中山大学 YatSenOS v2 操作系统实验教程 - YatSenOS v2 Tutorial</a></p>
+]]></content>
+      <categories>
+        <category>my feel</category>
+        <category>YSOS</category>
+      </categories>
+      <tags>
+        <tag>OS</tag>
       </tags>
   </entry>
   <entry>
