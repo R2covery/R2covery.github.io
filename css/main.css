@@ -1224,7 +1224,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0a44ff;
+    background: #d4ff24;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2864,4 +2864,11 @@ header.header {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+body {
+  cursor: url("/curs/default.cur"), default;
+}
+/*鼠标链接指针样式*/
+a:hover {
+  cursor: url("/curs/pointer.cur"), pointer;
 }
